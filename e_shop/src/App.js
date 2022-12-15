@@ -1,10 +1,16 @@
 import './App.css';
-import Navbar from './Components/Navbar';
+import BackgroundStructure from './Components/Login/BackgroundStructure';
+// import Navbar from './Components/Navbar';
+// import PasswordModal from './Components/Login/PasswordModal';
+// import ResetPassword from './Components/Login/ResetPassword';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
+      <BackgroundStructure/>
+      {/* <PasswordModal /> */}
+      {/* <ResetPassword/> */}
     </div>
   );
 }
