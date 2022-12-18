@@ -1,11 +1,24 @@
 import { Box } from '@chakra-ui/react'
 import * as React from 'react'
 import { ProductCard } from './ProductCard'
-import { products } from './productsData'
 import { ProductGrid } from './ProductGrid'
+import { useState, useEffect } from 'react';
+import axios from "axios";
 
-export const ProductsPage = () => (
-  <Box
+export const ProductsPage = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get(`https://calm-red-hen-hat.cyclic.app/api/products`)
+    .then((res) => {
+      // console.log(res.data);
+      setProducts(res.data);
+    },[]);
+  })
+  
+  return (
+    <>
+      <Box
     maxW="7xl"
     mx="auto"
     px={{
@@ -25,4 +38,7 @@ export const ProductsPage = () => (
       ))}
     </ProductGrid>
   </Box>
+  </>
 )
+  
+}
