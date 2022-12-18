@@ -14,7 +14,7 @@ function App() {
       {/* <PasswordModal /> */}
       {/* <ResetPassword/> */}
 
-      {/* <Cart/> */}
+      <Cart/>
       <ProductsPage/>
       <SingleProducts/>
     </div>
