@@ -11,15 +11,21 @@ import {
     Heading,
     Text,
     useColorModeValue,
-    Link,
     Grid,
   } from '@chakra-ui/react';
+  import { Link } from "react-router-dom"
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+  import { useNavigate } from 'react-router-dom';
   
 function SignUp() {
     const [showPassword, setShowPassword] = useState(false);
-  
+    const [click, setClick] = useState(false);
+    const Navigate = useNavigate();
+    const handleClick = () => {
+      setClick(true);
+      Navigate("/login")
+    }
     return (
       <Grid
         minH={'100vh'}
@@ -76,6 +82,7 @@ function SignUp() {
                 </InputGroup>
               </FormControl>
               <Stack spacing={10} pt={2}>
+                <Link to="/login">
                 <Button
                   loadingText="Submitting"
                   size="lg"
@@ -83,13 +90,14 @@ function SignUp() {
                   color={'white'}
                   _hover={{
                     bg: 'blue.500',
-                  }}>
+                  }} onClick={handleClick}>
                   Sign up
                 </Button>
+                </Link>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
-                  Already a user? <Link color={'blue.400'}>Login</Link>
+                  Already a user? <Link color={'blue.400'} to="/login">Login</Link>
                 </Text>
               </Stack>
             </Stack>

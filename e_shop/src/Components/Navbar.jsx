@@ -3,7 +3,6 @@ import {
   Flex,
   Avatar,
   HStack,
-  Link,
   Button,
   Menu,
   MenuButton,
@@ -16,11 +15,20 @@ import {
   Divider
 } from "@chakra-ui/react";
 import { HiUser } from "react-icons/hi2";
+import { Link} from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
 import { Input } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+  const Navigate = useNavigate();
+  const handleClick = () => {
+    setClick(true);
+    Navigate("/login")
+  }
   return (
     <>
       <Box bg={useColorModeValue("#318ffb", "#0066ff")} px={4}>
@@ -39,7 +47,7 @@ export default function Navbar() {
           <Flex alignItems={"center"}>
             <Menu>
               <Stack direction marginRight="60px">
-                <HiShoppingCart size="40px" cursor="pointer" />
+                <Link to="/cart"><HiShoppingCart size="40px" cursor="pointer" /></Link>
               </Stack>
               <MenuButton
                 as={Button}
@@ -47,15 +55,19 @@ export default function Navbar() {
                 variant={"link"}
                 cursor={"pointer"}
                 minW={0}
+                onClick={handleClick}
               >
+               
                 <Button
                   leftIcon={<HiUser />}
                   colorScheme="white"
                   border="1px solid white"
                   variant="outline"
+                  
                 >
-                  SignIn
+                 SignIn
                 </Button>
+                
 
                 {/* <Avatar
                   bg="teal" variant="outline"
@@ -81,10 +93,12 @@ export default function Navbar() {
           width="70%"
           margin="auto"
         >
-          <Text cursor="pointer">Consumer Electronics</Text>
-          <Text cursor="pointer">Smart Homes and Garden</Text>
-          <Text cursor="pointer">Generator and Portable Device</Text>
-          <Text cursor="pointer">Local Warehouses</Text>
+          <Link to="/productspage" >
+            <Text cursor="pointer">Consumer Electronics</Text>
+          </Link>
+          <Link to="/productspage"><Text cursor="pointer">Smart Homes and Garden</Text></Link>
+          <Link to="/productspage"><Text cursor="pointer">Generator and Portable Device</Text></Link>
+          <Link to="/productspage"><Text cursor="pointer">Local Warehouses</Text></Link>
         </Flex>
       </Box>
 

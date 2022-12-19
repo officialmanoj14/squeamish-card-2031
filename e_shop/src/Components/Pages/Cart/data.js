@@ -2,7 +2,7 @@ export const cartData = [
     {
       id: '1',
       price: 39.99,
-      currency: 'GBP',
+      currency: 'USD',
       name: 'Ferragamo bag',
       description: 'Tan, 40mm',
       quantity: 3,
@@ -12,7 +12,7 @@ export const cartData = [
     {
       id: '2',
       price: 39.99,
-      currency: 'GBP',
+      currency: 'USD',
       name: 'Bamboo Tan',
       description: 'Tan, 40mm',
       quantity: 3,
@@ -22,7 +22,7 @@ export const cartData = [
     {
       id: '3',
       price: 39.99,
-      currency: 'GBP',
+      currency: 'USD',
       name: 'Yeezy Sneakers',
       description: 'Tan, 40mm',
       quantity: 3,
