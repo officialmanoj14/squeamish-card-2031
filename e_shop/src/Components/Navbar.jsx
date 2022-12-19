@@ -34,7 +34,7 @@ export default function Navbar() {
       <Box bg={useColorModeValue("#318ffb", "#0066ff")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-around"}>
           <div style={{ marginTop: "15px", marginLeft: "30px" }}>
-            <img src="e_shop.png" alt="img" width="100px" height="19px" />
+            <Link to="/"><img src="e_shop.png" alt="img" width="100px" height="19px" /></Link>
           </div>
           <Input
             color="black"
