@@ -62,9 +62,11 @@ import {
           </HStack>
         </Stack>
         <Stack align="center">
+          <Link to="/cart" >
           <Button colorScheme="blue" width="full">
             Add to cart
           </Button>
+          </Link>
           <Link
             textDecoration="underline"
             fontWeight="medium"

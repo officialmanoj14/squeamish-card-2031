@@ -10,9 +10,21 @@ import {
   import * as React from 'react'
   import { CartItem } from './CartItem'
   import { CartOrderSummary } from './CartOrderSummary'
-  import { cartData } from './data'
-  
-  export const Cart = () => (
+  import { cartData } from './data';
+  import Footer from '../../Footer';
+  import Navbar from '../../Navbar';
+  import { useState } from "react";
+  import { useNavigate } from 'react-router-dom';
+  export const Cart = () => {
+    const [shopping, setShopping] = useState(false);
+    const Navigate = useNavigate();
+    const handleShopping = () => {
+      setShopping(true);
+      Navigate("/");
+    }
+    return (
+    <>
+    <Navbar/>
     <Box
       maxW={{
         base: '3xl',
@@ -65,9 +77,12 @@ import {
           <CartOrderSummary />
           <HStack mt="6" fontWeight="semibold">
             <p>or</p>
-            <Link color={mode('blue.500', 'blue.200')}>Continue shopping</Link>
+            <Link color={mode('blue.500', 'blue.200')} onClick={handleShopping}>Continue shopping</Link>
           </HStack>
         </Flex>
       </Stack>
     </Box>
-  )
+    <Footer/>
+    </>
+    )
+}

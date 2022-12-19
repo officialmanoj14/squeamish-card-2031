@@ -4,8 +4,12 @@ import { ProductCard } from './ProductCard'
 import { ProductGrid } from './ProductGrid'
 import { useState, useEffect } from 'react';
 import axios from "axios";
+import Footer from '../../Footer';
+import Navbar from '../../Navbar';
+
 
 export const ProductsPage = () => {
+  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,6 +22,7 @@ export const ProductsPage = () => {
   
   return (
     <>
+      <Navbar/>
       <Box
     maxW="7xl"
     mx="auto"
@@ -38,6 +43,7 @@ export const ProductsPage = () => {
       ))}
     </ProductGrid>
   </Box>
+  <Footer/>
   </>
 )
   

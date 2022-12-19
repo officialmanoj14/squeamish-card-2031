@@ -15,9 +15,24 @@ import {
     InputRightElement,
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-    const [showPassword, setShowPassword] = React.useState(false);
+    const [submit, setSubmit] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [signup, setSignup] = useState(false);
+
+    const Navigate = useNavigate();
+    const handleSignup = () => {
+        setSignup(true);
+        Navigate("/signup")
+    }
+    const handleSubmit = () => {
+        setSubmit(true);
+        alert("Login Successful");
+        Navigate("/");
+    }
     return (
         <Grid
             minH={'100vh'}
@@ -69,28 +84,31 @@ function Login() {
                                 <Checkbox>Remember me</Checkbox>
                                 <Link color={'blue.400'}>Forgot password?</Link>
                             </Stack>
+                           
                             <Button
                                 bg={'blue.400'}
                                 color={'white'}
                                 _hover={{
                                     bg: 'blue.500',
-                                }}>
+                                }} onClick={handleSubmit} >
                                 Sign in
                             </Button>
+                           
+                            
                             <Button
                                 bg={'gray.500'}
                                 color={'white'}
                                 _hover={{
                                     bg: 'gray.400',
-                                }} >
-                                Create a new account
+                                }} onClick={handleSignup}>
+                              Create a new account
                             </Button>
+                            
                         </Stack>
                     </Stack>
                 </Box>
             </Stack>
         </Grid>
-
     );
 }
 

@@ -1,7 +1,9 @@
 import './App.css';
-import LandingPage from './Components/LandingPage';
+// import LandingPage from './Components/LandingPage';
+import AllRoutes from './Components/Routes/AllRoutes';
 // import BackgroundStructure from './Components/Login/BackgroundStructure';
-// import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar';
+import Footer from "./Components/Footer";
 // import PasswordModal from './Components/Login/PasswordModal';
 // import ResetPassword from './Components/Login/ResetPassword';
 // import { Cart } from "./Components/Pages/Cart/Cart";
@@ -14,11 +16,15 @@ function App() {
       {/* <BackgroundStructure/> */}
       {/* <PasswordModal /> */}
       {/* <ResetPassword/> */}
+      
 
+      <AllRoutes/>
+     
       {/* <Cart/>
       <ProductsPage/>
       <SingleProducts/> */}
-      <LandingPage/>
+      {/* <LandingPage/> */}
+
     </div>
   );
 }
