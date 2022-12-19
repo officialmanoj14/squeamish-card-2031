@@ -15,6 +15,7 @@ import {
   import { Rating } from './Rating'
   import { FavouriteButton } from './FavouriteButton'
   import { ProductsPrice } from './ProductsPrice';
+  import AlertCart from "../Cart/AlertCart";
   
   export const ProductCard = (props) => {
     const { product, rootProps } = props
@@ -64,7 +65,7 @@ import {
         <Stack align="center">
           <Link to="/cart" >
           <Button colorScheme="blue" width="full">
-            Add to cart
+            <AlertCart/>
           </Button>
           </Link>
           <Link
