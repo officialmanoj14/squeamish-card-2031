@@ -1,32 +1,32 @@
 export const cartData = [
     {
       id: '1',
-      price: 39.99,
+      price: 89.99,
       currency: 'USD',
-      name: 'Ferragamo bag',
+      name: 'ILIFE A80 Plus',
       description: 'Tan, 40mm',
-      quantity: 3,
+      quantity: 1,
       imageUrl:
-        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
+        'https://img.gkbcdn.com/p/2022-06-15/ILIFE-A80-Plus-Robot-Vacuum-Mop-Cleaner-504826-0._w280_p1_.jpg',
     },
     {
       id: '2',
-      price: 39.99,
+      price: 109.99,
       currency: 'USD',
-      name: 'Bamboo Tan',
+      name: 'Proscenic A9 Smart Purifier',
       description: 'Tan, 40mm',
-      quantity: 3,
+      quantity: 1,
       imageUrl:
-        'https://images.unsplash.com/photo-1591561954557-26941169b49e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80',
+        'https://img.gkbcdn.com/p/2021-05-13/Proscenic-A9-Smart-Air-Purifier-White-459704-0._w280_p1_.jpg',
     },
     {
       id: '3',
-      price: 39.99,
+      price: 139.99,
       currency: 'USD',
-      name: 'Yeezy Sneakers',
+      name: 'Anti-Mite Vacuum cleaner',
       description: 'Tan, 40mm',
-      quantity: 3,
+      quantity: 1,
       imageUrl:
-        'https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80',
+        'https://img.gkbcdn.com/p/2022-03-24/Jimmy-BX7-Pro-Handheld-Anti-mite-Vacuum-Cleaner-498211-0._w280_p1_.jpg',
     },
   ]
